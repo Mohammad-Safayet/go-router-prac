@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
+    Key? key,
+    required this.navigationShell,
+  }) : super(key: key);
 
-  @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
-}
+  final StatefulNavigationShell navigationShell;
 
-class _BottomNavBarState extends State<BottomNavBar> {
-  int index = 0;
-
-  void changeIndex(int value) {
-    setState(() {
-      index = value;
-    });
+  void _onTap(int index) {
+    navigationShell.goBranch(
+      index,
+      initialLocation: index == navigationShell.currentIndex,
+    );
   }
 
   @override
@@ -25,12 +25,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
       selectedFontSize: 0,
       selectedItemColor: Theme.of(context).colorScheme.onPrimary,
       unselectedItemColor: Theme.of(context).colorScheme.onPrimaryContainer,
-      onTap: (value) {
-        debugPrint("$value");
-        changeIndex(value);
-      },
+      onTap: _onTap,
       backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-      currentIndex: index,
+      currentIndex: navigationShell.currentIndex,
       items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           label: "home",
@@ -42,7 +39,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(12.0),
               ),
-              color: index == 0
+              color: navigationShell.currentIndex == 0
                   ? Theme.of(context).colorScheme.primary
                   : Theme.of(context).colorScheme.primaryContainer,
             ),
@@ -61,7 +58,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(12.0),
                   topLeft: Radius.circular(12.0)),
-              color: index == 1
+              color: navigationShell.currentIndex == 1
                   ? Theme.of(context).colorScheme.primary
                   : Theme.of(context).colorScheme.primaryContainer,
             ),
@@ -80,7 +77,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(12.0),
               ),
-              color: index == 2
+              color: navigationShell.currentIndex == 2
                   ? Theme.of(context).colorScheme.primary
                   : Theme.of(context).colorScheme.primaryContainer,
             ),
