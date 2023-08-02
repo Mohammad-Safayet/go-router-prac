@@ -25,6 +25,8 @@ class MusicView extends StatelessWidget {
           final songs = products.keys.toList();
           final artists = products.values.toList();
           return ListTile(
+            // <a href="https://www.flaticon.com/free-icons/bass" title="bass icons">Bass icons created by Good Ware - Flaticon</a>
+            leading: Image.asset("name"),
             title: Text(
               songs[index],
               style: const TextStyle(
