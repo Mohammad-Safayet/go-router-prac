@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProductsView extends StatelessWidget {
   ProductsView({super.key});
@@ -22,6 +23,11 @@ class ProductsView extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(products[index]),
+            onTap: () {
+              context.push(
+                "/products_page/${products[index]}",
+              );
+            },
           );
         },
       ),
