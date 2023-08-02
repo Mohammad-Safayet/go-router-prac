@@ -23,6 +23,9 @@ class ProductsView extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(products[index]),
+            trailing: const Icon(
+              Icons.arrow_forward_ios_outlined,
+            ),
             onTap: () {
               context.push(
                 "/products_page/${products[index]}",
