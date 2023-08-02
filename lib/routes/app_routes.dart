@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:go_router_prac/pages/home_page.dart';
+import 'package:go_router_prac/pages/music_details_page.dart';
 import 'package:go_router_prac/pages/products_details_page.dart';
 import 'package:go_router_prac/views/music_view.dart';
 import 'package:go_router_prac/views/products_view.dart';
@@ -23,6 +24,26 @@ final routes = GoRouter(
             GoRoute(
               path: "/music_page",
               builder: (context, state) => MusicView(),
+              routes: [
+                GoRoute(
+                  parentNavigatorKey: _rootNavigatorKey,
+                  path: "details",
+                  // pageBuilder: (context, state) {
+                  //   final music = state.extra as Map<String, String>;
+                  //   return CustomTransitionPage(
+                  //     child: MusicDetailsPage(
+                  //       music: music,
+                  //     ),
+                  //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                  //       return SlideTransition(position: const Offset(200.0, 200.0), )
+                  //     },
+                  //   );
+                  // },
+                  builder: (context, state) => MusicDetailsPage(
+                    music: state.extra as Map<String, String>,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -54,11 +75,5 @@ final routes = GoRouter(
         ),
       ],
     ),
-    // GoRoute(
-    //   path: "/products_page/:title",
-    //   builder: (context, state) => ProductsDetailsPage(
-    //     title: state.pathParameters["title"]!,
-    //   ),
-    // ),
   ],
 );
