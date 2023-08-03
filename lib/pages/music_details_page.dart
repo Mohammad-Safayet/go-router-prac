@@ -20,8 +20,34 @@ class MusicDetailsPage extends StatelessWidget {
       body: Container(
         color: Theme.of(context).colorScheme.background,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset("assets/sound.png"),
+            // <a href="https://www.flaticon.com/free-icons/bass" title="bass icons">Bass icons created by Good Ware - Flaticon</a>
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 35.0,
+                vertical: 25.0,
+              ),
+              child: Hero(
+                tag: 'music_image_${music.keys.toList()[0]}',
+                child: Image.asset("assets/sound.png"),
+              ),
+            ),
+            // Song name
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                music.keys.toList()[0],
+                style: const TextStyle(
+                  fontSize: 25.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            // Artist name
+            Text(
+              music.values.toList()[0],
+            ),
           ],
         ),
       ),
