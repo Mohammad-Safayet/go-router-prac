@@ -10,7 +10,32 @@ import 'package:go_router_prac/views/profile_view.dart';
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _sectionNavigatorKey = GlobalKey<NavigatorState>();
 
-final routes = GoRouter(
+class CustomSlideTransition extends CustomTransitionPage<void> {
+  CustomSlideTransition({super.key, required super.child})
+      : super(
+          transitionDuration: const Duration(
+            milliseconds: 900,
+          ),
+          reverseTransitionDuration: const Duration(
+            milliseconds: 900,
+          ),
+          transitionsBuilder: (_, animation, __, child) {
+            return SlideTransition(
+              position: animation.drive(
+                Tween<Offset>(
+                  begin: const Offset(1.5, 0),
+                  end: Offset.zero,
+                ).chain(
+                  CurveTween(curve: Curves.easeInOutCirc),
+                ),
+              ),
+              child: child,
+            );
+          },
+        );
+}
+
+final router = GoRouter(
   initialLocation: "/music_page",
   navigatorKey: _rootNavigatorKey,
   routes: [
@@ -67,9 +92,13 @@ final routes = GoRouter(
                 GoRoute(
                   parentNavigatorKey: _rootNavigatorKey,
                   path: ":title",
-                  builder: (context, state) => ProductsDetailsPage(
-                    title: state.pathParameters["title"]!,
-                  ),
+                  pageBuilder: (context, state) {
+                    return CustomSlideTransition(
+                      child: ProductsDetailsPage(
+                        title: state.pathParameters["title"]!,
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
