@@ -28,20 +28,30 @@ final routes = GoRouter(
                 GoRoute(
                   parentNavigatorKey: _rootNavigatorKey,
                   path: "details",
-                  // pageBuilder: (context, state) {
-                  //   final music = state.extra as Map<String, String>;
-                  //   return CustomTransitionPage(
-                  //     child: MusicDetailsPage(
-                  //       music: music,
-                  //     ),
-                  //     transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                  //       return SlideTransition(position: const Offset(200.0, 200.0), )
-                  //     },
-                  //   );
-                  // },
-                  builder: (context, state) => MusicDetailsPage(
-                    music: state.extra as Map<String, String>,
-                  ),
+                  pageBuilder: (context, state) {
+                    final music = state.extra as Map<String, String>;
+
+                    return CustomTransitionPage(
+                      child: MusicDetailsPage(
+                        music: music,
+                      ),
+                      transitionDuration: const Duration(
+                        milliseconds: 900,
+                      ),
+                      reverseTransitionDuration: const Duration(
+                        milliseconds: 900,
+                      ),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return Align(
+                          child: FadeTransition(
+                            opacity: animation,
+                            child: child,
+                          ),
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             ),
