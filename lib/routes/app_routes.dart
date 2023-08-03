@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:go_router_prac/pages/home_page.dart';
 import 'package:go_router_prac/pages/music_details_page.dart';
 import 'package:go_router_prac/pages/products_details_page.dart';
+import 'package:go_router_prac/routes/navigator_observer.dart';
 import 'package:go_router_prac/views/music_view.dart';
 import 'package:go_router_prac/views/products_view.dart';
 import 'package:go_router_prac/views/profile_view.dart';
@@ -38,6 +39,9 @@ class CustomSlideTransition extends CustomTransitionPage<void> {
 final router = GoRouter(
   initialLocation: "/music_page",
   navigatorKey: _rootNavigatorKey,
+  observers: [
+    MainApplicationObserver(),
+  ],
   routes: [
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
