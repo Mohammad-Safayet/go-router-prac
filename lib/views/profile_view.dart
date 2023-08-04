@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -7,11 +8,25 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).colorScheme.background,
-      child: const Column(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text("Profile"),
+          const Text("Profile"),
+          const SizedBox(
+            height: 20,
+          ),
+          TextButton(
+            onPressed: () {
+              context.go("/error");
+            },
+            child: Text(
+              "go to error page.",
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.error,
+              ),
+            ),
+          ),
         ],
       ),
     );
