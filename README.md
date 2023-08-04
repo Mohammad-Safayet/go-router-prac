@@ -28,7 +28,30 @@ This app showcases various screens and features, with each screen demonstrating 
     flutter pub run
     ```
 
+## Screenshots
+
+<div style="width: 180px; height: 100px;">
+    ![Music list screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_one.jpg)
+</div>
+<div style="width: 180px; height: 100px;">
+    ![Utilities list screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_two.jpg)
+</div>
+<div style="width: 180px; height: 100px;">
+    ![profile screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_three.jpg)
+</div>
+<div style="width: 180px; height: 100px;">
+    ![Music details scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_one.jpg)
+</div>
+<div style="width: 180px; height: 100px;">
+    ![Utility details scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_two.jpg)
+</div>
+<div style="width: 180px; height: 100px;">
+    ![Error scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_error.jpg)
+</div>
+
+
 ## Dependencies
+
 - [go_router](https://pub.dev/packages/go_router) - A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens. You can define URL patterns, navigate using a URL, handle deep links, and a number of other navigation-related scenarios.
 
 ## Attribution
