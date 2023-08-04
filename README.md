@@ -30,9 +30,9 @@ This app showcases various screens and features, with each screen demonstrating 
 
 ## Screenshots
 
-<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_one.jpg" alt="Musics list screen" width="200" height="300" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_two.jpg" alt="Utilities list screen" width="200" height="300" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_three.jpg" alt="profile screen" width="200" height="300" />
-<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_one.jpg" alt="Music details screen" width="200" height="300" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_two.jpg" alt="Utility details screen" width="200" height="300" />
-<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_error.jpg" alt="Error screen" width="200" height="300" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_one.jpg" alt="Musics list screen" width="200" height="450" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_two.jpg" alt="Utilities list screen" width="200" height="450" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_three.jpg" alt="profile screen" width="200" height="450" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_one.jpg" alt="Music details screen" width="200" height="450" /><img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_two.jpg" alt="Utility details screen" width="200" height="450" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_error.jpg" alt="Error screen" width="180" height="450" />
 
 ## Dependencies
 
