@@ -30,25 +30,12 @@ This app showcases various screens and features, with each screen demonstrating 
 
 ## Screenshots
 
-<div style="width: 180px; height: 100px;">
-    ![Music list screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_one.jpg)
-</div>
-<div style="width: 180px; height: 100px;">
-    ![Utilities list screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_two.jpg)
-</div>
-<div style="width: 180px; height: 100px;">
-    ![profile screen](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_three.jpg)
-</div>
-<div style="width: 180px; height: 100px;">
-    ![Music details scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_one.jpg)
-</div>
-<div style="width: 180px; height: 100px;">
-    ![Utility details scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_two.jpg)
-</div>
-<div style="width: 180px; height: 100px;">
-    ![Error scrren](https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_error.jpg)
-</div>
-
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_one.jpg" alt="Musics list screen" width="200" height="100" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_two.jpg" alt="Utilities list screen" width="200" height="100" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_three.jpg" alt="profile screen" width="200" height="100" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_one.jpg" alt="Music details screen" width="200" height="100" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_details_two.jpg" alt="Utility details screen" width="200" height="100" />
+<img src="https://github.com/Mohammad-Safayet/go-router-prac/blob/main/screenshots/screen_error.jpg" alt="Error screen" width="200" height="100" />
 
 ## Dependencies
 
