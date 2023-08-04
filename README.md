@@ -14,21 +14,23 @@ This app showcases various screens and features, with each screen demonstrating 
 - **404 Not Found Screen:** A personalized "Not Found" screen to manage unknown routes elegantly.
 
 ## Installation
-1. **Clone the Repository:** \Clone this repository to your local machine using the following command:
-    \
+1. **Clone the Repository:** <br />Clone this repository to your local machine using the following command:<br /><br />
     ```bash
     git clone https://github.com/Mohammad-Safayet/go-router-prac.git
     ```
+2. **Install Dependencies:**<br />Navigate to the project directory and install the required dependencies:<br /><br />
+    ```bash
+    cd go-router-prac
+    flutter pub get
+    ```
+3. **Run the App:**<br />Run the app on your preferred device or emulator using the following command:<br /><br />
+    ```bash
+    flutter pub run
+    ```
 
-## Getting Started
+## Dependencies
+- [go_router](https://pub.dev/packages/go_router) - A declarative routing package for Flutter that uses the Router API to provide a convenient, url-based API for navigating between different screens. You can define URL patterns, navigate using a URL, handle deep links, and a number of other navigation-related scenarios.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Attribution
+- [music icons](https://www.flaticon.com/free-icons/music) - Music icons created by Freepik - Flaticon
+- [bass icons](https://www.flaticon.com/free-icons/bass) - Bass icons created by Good Ware - Flaticon
