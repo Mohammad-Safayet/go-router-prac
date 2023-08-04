@@ -1,6 +1,16 @@
 # go_router_prac
 
-A new Flutter project.
+This is a sample Flutter application that demonstrates how to use `go_router` for handling navigation within the app.
+
+## Overview
+
+This app showcases various screens and features, with each screen demonstrating a different use case for navigation using `go_router`.
+
+## Features
+
+- **Home Screen:** This is the landing screen for the app that uses `go_router`'s `StatefulShellRoute.indexedStack` providing an overview of the app's features and navigation options.
+- **Listing Screen:** Shows a list of items, each of which can be clicked and leads to the relevant details screen using dynamic routing with parameter
+- **Details Screen:** Provides comprehensive information about a selected item, which is loaded dynamically based on the item's ID that is passed as a parameter.
 
 ## Getting Started
 
