@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_prac/pages/error_page.dart';
 import 'package:go_router_prac/pages/home_page.dart';
 import 'package:go_router_prac/pages/music_details_page.dart';
 import 'package:go_router_prac/pages/products_details_page.dart';
@@ -42,6 +43,10 @@ final router = GoRouter(
   observers: [
     MainApplicationObserver(),
   ],
+  errorBuilder: (context, state) {
+    final error = state.error;
+    return ErrorScreen(error: error,);
+  },
   routes: [
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
