@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:go_router_prac/base/screen_base.dart';
 import 'package:go_router_prac/widgets/app_bar.dart';
 import 'package:go_router_prac/widgets/bottom_nav_bar.dart';
+import 'package:go_router_prac/widgets/nav_drawer.dart';
 
 class HomeScreen extends BaseView {
   HomeScreen({
@@ -30,5 +31,10 @@ class HomeScreen extends BaseView {
     return BottomNavBar(
       navigationShell: navigationShell,
     );
+  }
+
+  @override
+  Widget? drawer() {
+    return const NavDrawer();
   }
 }
