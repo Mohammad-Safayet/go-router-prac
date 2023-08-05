@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_prac/pages/admin_page.dart';
 import 'package:go_router_prac/pages/error_page.dart';
 import 'package:go_router_prac/pages/home_page.dart';
 import 'package:go_router_prac/pages/music_details_page.dart';
@@ -45,7 +46,9 @@ final router = GoRouter(
   ],
   errorBuilder: (context, state) {
     final error = state.error;
-    return ErrorScreen(error: error,);
+    return ErrorScreen(
+      error: error,
+    );
   },
   routes: [
     StatefulShellRoute.indexedStack(
@@ -122,6 +125,20 @@ final router = GoRouter(
           ],
         ),
       ],
+    ),
+    GoRoute(
+      parentNavigatorKey: _rootNavigatorKey,
+      path: "/admin",
+      redirect: (context, state) {
+        final admin = state.uri.queryParameters["admin"];
+
+        if (admin == null) {
+          return "/music_page";
+        } else {
+          return null;
+        }
+      },
+      builder: (context, state) => const AdminPage(),
     ),
   ],
 );
