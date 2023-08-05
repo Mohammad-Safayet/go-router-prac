@@ -25,7 +25,7 @@ This app showcases various screens and features, with each screen demonstrating 
     ```
 3. **Run the App:**<br />Run the app on your preferred device or emulator using the following command:<br /><br />
     ```bash
-    flutter pub run
+    flutter run
     ```
 
 ## Screenshots
